@@ -1,0 +1,47 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Client;
+use App\Models\Status;
+use Illuminate\Http\Request;
+
+class AdminClientController extends Controller
+{
+    /**
+     * Display a paginated list of pending clients.
+     */
+    public function pendingClients()
+    {
+        $pendingClients = Client::where('status_code', 'NL')
+                                ->orderBy('created_at', 'desc')
+                                ->paginate(10); // Paginate with 10 items per page
+
+        return view('admin.pending-clients', compact('pendingClients'));
+    }
+
+    /**
+     * Display the specified client.
+     */
+    public function showClient(Client $client)
+    {
+        $statuses = Status::all(); // Get all possible statuses for dropdown or reference
+        return view('admin.client-detail', compact('client', 'statuses'));
+    }
+
+    /**
+     * Update the status of the specified client.
+     */
+    public function updateStatus(Request $request, Client $client)
+    {
+        $request->validate([
+            'status_code' => ['required', 'exists:statuses,status_code'],
+        ]);
+
+        $client->update([
+            'status_code' => $request->status_code,
+        ]);
+
+        return redirect()->back()->with('success', 'Client status updated successfully!');
+    }
+}
