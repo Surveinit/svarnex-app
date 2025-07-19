@@ -17,7 +17,7 @@
 </x-nav-link>
 
 <x-nav-link :href="route('admin.pending')" :active="request()->routeIs('admin.pending')">
-    {{ __('New Lead') }}
+    {{ __('New Leads') }}
 </x-nav-link>
 
 <x-nav-link :href="route('admin.meeting')" :active="request()->routeIs('admin.meeting')">
