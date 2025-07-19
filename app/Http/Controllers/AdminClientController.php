@@ -14,16 +14,16 @@ class AdminClientController extends Controller
     public function pendingClients()
     {
         $pendingClients = Client::where('status_code', 'NL')
-                                ->orderBy('created_at', 'desc')
-                                ->paginate(10); // Paginate with 10 items per page
+            ->orderBy('created_at', 'desc')
+            ->paginate(10); // Paginate with 10 items per page
 
         return view('admin.pending-clients', compact('pendingClients'));
     }
 
-    public function allClients(){
-        $clients = Client::all();
+    public function allClients()
+    {
+        $clients = Client::latest()->simplePaginate(10);
         return view('admin.clients', compact('clients'));
-
     }
 
     /**

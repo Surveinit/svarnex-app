@@ -38,6 +38,10 @@
                         </div>
                     @endif
                 </div>
+
+    <div>
+        {{ $clients->links()  }}
+    </div>
             </div>
         </div>
     </div>
