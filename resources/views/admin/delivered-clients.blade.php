@@ -16,22 +16,22 @@
                             <table class="min-w-full divide-y divide-gray-200">
                                 <thead class="bg-gray-50">
                                     <tr>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date & Time</th>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                                        <th scope="col" class="px-6 py-6 border border-gray-300 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Name</th>
+                                        <th scope="col" class="px-6 py-6 border border-gray-300 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Email</th>
+                                        <th scope="col" class="px-6 py-6 border border-gray-300 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Description</th>
+                                        <th scope="col" class="px-6 py-6 border border-gray-300 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Date & Time</th>
+                                        <th scope="col" class="px-6 py-6 border border-gray-300 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200">
                                     @foreach ($deliveredClients as $client)
                                         <tr>
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ $client->name }}</td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ $client->email }}</td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ $client->phone }}</td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ $client->updated_at->format('M d, Y H:i A') }}</td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                <a href="{{ route('admin.client.show', $client) }}" class="text-indigo-600 hover:text-indigo-900">View Details</a>
+                                            <td class="px-6 py-4 border border-gray-300 whitespace-nowrap text-sm font-medium text-gray-900">{{ $client->name }}</td>
+                                            <td class="px-6 py-4 border border-gray-300 whitespace-nowrap text-sm text-gray-500">{{ $client->email }}</td>
+                                            <td class="px-6 py-4 border border-gray-300 whitespace-nowrap text-sm text-gray-500">{{ $client->phone }}</td>
+                                            <td class="px-6 py-4 border border-gray-300 whitespace-nowrap text-sm text-gray-500">{{ $client->date_time->format('M d, Y H:i A') }}</td>
+                                            <td class="px-6 py-4 border border-gray-300 whitespace-nowrap text-right text-sm font-medium">
+                                                <a href="{{ route('admin.client.show', $client) }}" class="text-indigo-600 hover:text-indigo-900">View</a>
                                             </td>
                                         </tr>
                                     @endforeach
