@@ -14,7 +14,7 @@ class AdminClientController extends Controller
 
     public function allClients()
     {
-        $clients = Client::latest()->simplePaginate(10);
+        $clients = Client::latest()->Paginate(10);
         return view('admin.clients', compact('clients'));
     }
 
