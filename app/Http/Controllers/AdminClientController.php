@@ -20,6 +20,12 @@ class AdminClientController extends Controller
         return view('admin.pending-clients', compact('pendingClients'));
     }
 
+    public function allClients(){
+        $clients = Client::all();
+        return view('admin.clients', compact('clients'));
+
+    }
+
     /**
      * Display the specified client.
      */

@@ -12,6 +12,10 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+<x-nav-link :href="route('admin.clients')" :active="request()->routeIs('admin.clients')">
+    {{ __('Clients') }}
+</x-nav-link>
+
 <x-nav-link :href="route('admin.pending')" :active="request()->routeIs('admin.pending')">
     {{ __('Pending Clients') }}
 </x-nav-link>

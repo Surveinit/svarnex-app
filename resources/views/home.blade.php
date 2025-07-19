@@ -142,7 +142,7 @@
                     <input id="consultation_email" type="email" name="email" required>
                 </div>
                 <div class="form-group mb-4">
-                    <label for="phone">Phone Number</label>
+                    <label for="phone">Description</label>
                     <input id="consultation_phone" type="text" name="phone" required>
                 </div>
                 <div class="form-group mb-4">

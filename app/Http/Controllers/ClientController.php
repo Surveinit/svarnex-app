@@ -27,7 +27,7 @@ class ClientController extends Controller
             $validatedData = $request->validate([
                 'name' => ['required', 'string', 'max:255'],
                 'email' => ['required', 'string', 'email', 'max:255', 'unique:clients'],
-                'phone' => ['required', 'string', 'regex:/^\+?\d{10,15}$/'], // Basic phone number regex
+                'phone' => ['required', 'string'],
                 'date_time' => ['required', 'date_format:Y-m-d H:i'],
             ]);
 
