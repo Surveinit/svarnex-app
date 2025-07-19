@@ -45,6 +45,15 @@ class AdminClientController extends Controller
         return view('admin.delivered-clients', compact('deliveredClients'));
     }
 
+    public function lostClients()
+    {
+        $lostClients = Client::where('status_code', 'CL')
+            ->orderBy('created_at', 'desc')
+            ->paginate(10); // Paginate with 10 items per page
+
+        return view('admin.lost-clients', compact('lostClients'));
+    }
+
     /**
      * Display the specified client.
      */

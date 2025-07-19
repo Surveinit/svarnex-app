@@ -31,6 +31,7 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
     Route::get('/pending', [AdminClientController::class, 'pendingClients'])->name('pending');
     Route::get('/meeting', [AdminClientController::class, 'meetingClients'])->name('meeting');
     Route::get('/delivered', [AdminClientController::class, 'deliveredClients'])->name('delivered');
+    Route::get('/lost', [AdminClientController::class, 'lostClients'])->name('lost');
     Route::get('/pending/{client}', [AdminClientController::class, 'showClient'])->name('client.show');
     Route::patch('/client/{client}/status', [AdminClientController::class, 'updateStatus'])->name('client.updateStatus');
 });

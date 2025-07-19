@@ -27,6 +27,10 @@
 <x-nav-link :href="route('admin.delivered')" :active="request()->routeIs('admin.delivered')">
     {{ __('Product Delivered') }}
 </x-nav-link>
+
+<x-nav-link :href="route('admin.lost')" :active="request()->routeIs('admin.lost')">
+    {{ __('Lost Clients') }}
+</x-nav-link>
                 </div>
             </div>
 

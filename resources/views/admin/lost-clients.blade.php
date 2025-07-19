@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('New leads from the consultation.') }}
+            {{ __('Clients Svarnex Lost.') }}
         </h2>
     </x-slot>
 
@@ -9,8 +9,8 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    @if ($pendingClients->isEmpty())
-                        <p>No pending clients found.</p>
+                    @if ($lostClients->isEmpty())
+                        <p>No clients found.</p>
                     @else
                         <div class="overflow-x-auto">
                             <table class="min-w-full divide-y divide-gray-200">
@@ -24,12 +24,12 @@
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200">
-                                    @foreach ($pendingClients as $client)
+                                    @foreach ($lostClients as $client)
                                         <tr>
                                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ $client->name }}</td>
                                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ $client->email }}</td>
                                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ $client->phone }}</td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ $client->date_time->format('M d, Y H:i A') }}</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ $client->updated_at->format('M d, Y H:i A') }}</td>
                                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                                 <a href="{{ route('admin.client.show', $client) }}" class="text-indigo-600 hover:text-indigo-900">View Details</a>
                                             </td>
@@ -38,11 +38,12 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="mt-4">
-                            {{ $pendingClients->links() }}
-                        </div>
                     @endif
                 </div>
+
+    <div>
+        {{ $lostClients->links()  }}
+    </div>
             </div>
         </div>
     </div>
