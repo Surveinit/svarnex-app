@@ -69,13 +69,13 @@
 
         /* Section Styling */
         .section-padding {
-            padding: 5rem 0;
+            padding: 3rem 0;
         }
         .section-heading {
             font-size: 3rem;
             font-weight: 700;
             color: #DAA520; /* Dark Golden heading */
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem;
             text-align: center;
         }
         @media (max-width: 767px) {
@@ -90,7 +90,7 @@
             position: relative;
             overflow: hidden;
             width: 100%;
-            min-height: 700px; /* Min height for desktop */
+            min-height: 500px; /* Min height for desktop */
             display: flex; /* Use flex to center content */
             align-items: center; /* Center vertically */
             justify-content: center; /* Center horizontally */
@@ -109,7 +109,7 @@
         }
         .carousel-item {
             flex: 0 0 100%; /* Always one item per view */
-            padding: 1rem;
+            padding: 0rem;
             box-sizing: border-box;
             text-align: center;
             display: flex; /* For centering content inside item */
@@ -552,7 +552,7 @@
      <section id="consultation" class="section-padding bg-black text-center">
         <div class="container">
             <h2 class="section-heading">Get Your Free Consultation</h2>
-            <p class="text-lg text-white mb-8 max-w-2xl mx-auto">Ready to take your business to the next level? Schedule a free consultation with our experts to discuss your needs and how Svarnex can help you achieve your goals.</p>
+            <p class="text-lg text-white mb-8 max-w-2xl mx-auto">Ready to take your business to the next level? Schedule a free consultation with us to discuss your needs and how Svarnex can help you achieve your goals.</p>
             <button onclick="openConsultationModal()" class="submit-button text-xl px-8 py-3 rounded-full">Book a Consultation</button>
         </div>
     </section>
