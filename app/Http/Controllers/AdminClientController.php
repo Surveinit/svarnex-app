@@ -11,6 +11,13 @@ class AdminClientController extends Controller
     /**
      * Display a paginated list of pending clients.
      */
+
+    public function allClients()
+    {
+        $clients = Client::latest()->simplePaginate(10);
+        return view('admin.clients', compact('clients'));
+    }
+
     public function pendingClients()
     {
         $pendingClients = Client::where('status_code', 'NL')
@@ -20,10 +27,22 @@ class AdminClientController extends Controller
         return view('admin.pending-clients', compact('pendingClients'));
     }
 
-    public function allClients()
+    public function meetingClients()
     {
-        $clients = Client::latest()->simplePaginate(10);
-        return view('admin.clients', compact('clients'));
+        $meetingClients = Client::where('status_code', 'MT')
+            ->orderBy('created_at', 'desc')
+            ->paginate(10); // Paginate with 10 items per page
+
+        return view('admin.meeting-clients', compact('meetingClients'));
+    }
+
+    public function deliveredClients()
+    {
+        $deliveredClients = Client::where('status_code', 'PD')
+            ->orderBy('created_at', 'desc')
+            ->paginate(10); // Paginate with 10 items per page
+
+        return view('admin.delivered-clients', compact('deliveredClients'));
     }
 
     /**

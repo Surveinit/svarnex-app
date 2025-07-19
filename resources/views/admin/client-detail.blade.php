@@ -20,7 +20,7 @@
                             <h3 class="text-lg font-medium text-gray-900 mb-4">Client Information</h3>
                             <p><strong>Name:</strong> {{ $client->name }}</p>
                             <p><strong>Email:</strong> {{ $client->email }}</p>
-                            <p><strong>Phone:</strong> {{ $client->phone }}</p>
+                            <p><strong>Description:</strong> {{ $client->phone }}</p>
                             <p><strong>Requested Date/Time:</strong> {{ $client->date_time->format('M d, Y H:i A') }}</p>
                             <p><strong>Current Status:</strong> <span class="font-bold">{{ $client->status->status }}</span></p>
                         </div>

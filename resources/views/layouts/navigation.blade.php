@@ -17,7 +17,15 @@
 </x-nav-link>
 
 <x-nav-link :href="route('admin.pending')" :active="request()->routeIs('admin.pending')">
-    {{ __('Pending Clients') }}
+    {{ __('New Lead') }}
+</x-nav-link>
+
+<x-nav-link :href="route('admin.meeting')" :active="request()->routeIs('admin.meeting')">
+    {{ __('Meeting Scheduled') }}
+</x-nav-link>
+
+<x-nav-link :href="route('admin.delivered')" :active="request()->routeIs('admin.delivered')">
+    {{ __('Product Delivered') }}
 </x-nav-link>
                 </div>
             </div>
