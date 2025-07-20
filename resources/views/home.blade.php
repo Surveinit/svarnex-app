@@ -106,19 +106,83 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Svarnex. All rights reserved. Made with ❤️ in India.</p>
-            <div class="social-icons-footer">
-                <a href="https://www.instagram.com/svarnex/" target="_blank" aria-label="Instagram">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                </a>
-                <a href="https://www.linkedin.com/company/svarnex/" target="_blank" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucude-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-                </a>
+<footer class="bg-black border-t border-gray-800 text-gray-400 text-sm leading-relaxed">
+    <div class="container max-w-screen-xl mx-auto px-6 py-12">
+        <div class="footer-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10 text-left">
+
+            <!-- About Us -->
+            <div class="footer-section">
+                <h3 class="text-white text-lg font-semibold mb-4 relative pb-2">
+                    About Svarnex
+                    <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-yellow-600"></span>
+                </h3>
+                <p>
+                    We are dedicated to crafting innovative solutions that empower businesses and individuals. Learn more about our mission and values.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3 class="text-white text-lg font-semibold mb-4 relative pb-2">
+                    Quick Links
+                    <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-yellow-600"></span>
+                </h3>
+                <ul class="space-y-2">
+                    <li><a href="/about-us" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="/services" class="hover:text-white transition">Services</a></li>
+                    <li><a href="/portfolio" class="hover:text-white transition">Portfolio</a></li>
+                    <li><a href="/blog" class="hover:text-white transition">Blog</a></li>
+                    <li><a href="/contact" class="hover:text-white transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-section">
+                <h3 class="text-white text-lg font-semibold mb-4 relative pb-2">
+                    Connect With Us
+                    <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-yellow-600"></span>
+                </h3>
+                <div class="flex space-x-4 mt-2">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/svarnex/" target="_blank" aria-label="Instagram" class="hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/company/svarnex/" target="_blank" aria-label="LinkedIn" class="hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect width="4" height="12" x="2" y="9"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-section">
+                <h3 class="text-white text-lg font-semibold mb-4 relative pb-2">
+                    Get in Touch
+                    <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-yellow-600"></span>
+                </h3>
+                <p>Email: <a href="mailto:founder@svarnex.com" class="hover:text-white transition">founder@svarnex.com</a></p>
+                <p>Phone: <a href="tel:+911234567890" class="hover:text-white transition">+91 93729 91900</a></p>
             </div>
         </div>
-    </footer>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom border-t border-gray-700 pt-6 text-center text-xs sm:text-sm">
+            <p>&copy; 2025 Svarnex. All rights reserved. Made with ❤️ in India.</p>
+            <p class="mt-2">
+                <a href="/privacy-policy" class="hover:text-white transition">Privacy Policy</a> |
+                <a href="/terms-of-service" class="hover:text-white transition">Terms of Service</a>
+            </p>
+        </div>
+    </div>
+</footer>
 
     <div id="messageBox" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden">
         <div class="bg-white p-8 rounded-lg shadow-lg text-center max-w-sm mx-auto">
@@ -201,15 +265,6 @@
            </div>
        </div>
     </div>
-
-    <div id="templateDemoModal" class="modal-overlay hidden">
-    <div class="modal-content">
-        <button class="modal-close-button" onclick="closeModal('templateDemoModal')">&times;</button>
-        <div class="modal-body">
-            <p>AI-suggested templates will appear here.</p>
-        </div>
-    </div>
-  </div>
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
